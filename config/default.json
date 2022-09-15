@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://oxymoron365:oZ1Pyrg5ZFYL3jSR@devconnector.xf3xiwf.mongodb.net/?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://oxymoron365:oZ1Pyrg5ZFYL3jSR@devconnector.xf3xiwf.mongodb.net/?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken"
 }
