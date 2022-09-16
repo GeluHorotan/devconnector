@@ -1,12 +1,12 @@
 import './App.css';
 import React from 'react';
-import {
-  BrowserRouter,
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
+// Redux
+import { Provider } from 'react-redux';
+import store from './store';
+
+// Components
 import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
 import Login from './components/auth/Login';
@@ -14,7 +14,7 @@ import Register from './components/auth/Register';
 
 const App = () => {
   return (
-    <div>
+    <Provider store={store}>
       <Router>
         <Navbar />
         <Routes>
@@ -40,7 +40,7 @@ const App = () => {
           ></Route>
         </Routes>
       </Router>
-    </div>
+    </Provider>
   );
 };
 
