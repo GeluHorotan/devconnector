@@ -10,7 +10,7 @@ const PrivateRoute = ({
   if (!isAuthenticated) {
     return <Navigate to='/login' />;
   } else {
-    <Component />;
+    return Component;
   }
 };
 
