@@ -10,7 +10,6 @@ const EditProfile = ({
   getCurrentProfile,
   history,
 }) => {
-  const creatingProfile = useMatch('/create-profile');
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     company: '',

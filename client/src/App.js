@@ -21,6 +21,8 @@ import Dashboard from './components/dashboard/Dashboard';
 import PrivateRoute from './components/routing/PrivateRoute';
 import CreateProfile from './components/profile-forms/CreateProfile';
 import EditProfile from './components/profile-forms/EditProfile';
+import AddExperience from './components/profile-forms/AddExperience';
+import AddEducation from './components/profile-forms/AddEducation';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -91,6 +93,32 @@ const App = () => {
               component={
                 <section className='container'>
                   <EditProfile />
+                </section>
+              }
+            />
+          }
+        />
+        <Route
+          exact
+          path='/add-experience'
+          element={
+            <PrivateRoute
+              component={
+                <section className='container'>
+                  <AddExperience />
+                </section>
+              }
+            />
+          }
+        />
+        <Route
+          exact
+          path='/add-education'
+          element={
+            <PrivateRoute
+              component={
+                <section className='container'>
+                  <AddEducation />
                 </section>
               }
             />
