@@ -19,6 +19,7 @@ import setAuthToken from './utils/setAuthToken';
 
 import Dashboard from './components/dashboard/Dashboard';
 import PrivateRoute from './components/routing/PrivateRoute';
+import CreateProfile from './components/profile-forms/CreateProfile';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -63,6 +64,19 @@ const App = () => {
               component={
                 <section className='container'>
                   <Dashboard />
+                </section>
+              }
+            />
+          }
+        />
+        <Route
+          exact
+          path='/create-profile'
+          element={
+            <PrivateRoute
+              component={
+                <section className='container'>
+                  <CreateProfile />
                 </section>
               }
             />
